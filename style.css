@@ -1,0 +1,39 @@
+h1 {
+    color: orange;
+    background-color: #6f88ad;
+    padding: 20px;
+    text-align: center;
+}
+h2{
+color:rgb(255, 145, 0);
+font-style: normal;
+padding: 2%;
+}
+h3 {
+    color: orange;
+    font-size: 100%;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #747a99;
+    padding: 10px;
+    text-align: center;
+}
+
+#profile-image {
+    border-radius: 150%;
+    cursor: pointer;
+    
+}
+
+li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+img{
+    size: 13%;
+    align-items: flex-end;
+}

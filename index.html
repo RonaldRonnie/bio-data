@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="jumbotron text-center">
+            <h1>OUMA RONALD - FINAL EXAM</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img id="profile-photo" src="images/j.jpeg" alt="Profile Photo" class="img-thumbnail">
+            </div>
+            <div class="col-md-6">
+                <h2>Personal Details</h2>
+                <ul>
+                    <li>Name: Ouma Ronald</li>
+                    <li>Registration Number: 22/BSE/BU/R/0018</li>
+                    <li>Examination Number: 23SEM/BU/Exam 2102</li>
+                    <li>Email: ronald2ouma2@gmail.com</li>
+                    <li>Phone Contact: +256759452603</li>
+                </ul>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3><a href="http://familylegacy.rf.gd">familylegacy.rf.gd</a></h3>
+                <!-- Add your personal website links here -->
+            </div>
+            <div class="col-sm-6">
+                <h3><a href="http://texascllage.rf.gd">texascllage.rf.gd</a></h3>
+                <!-- Add your organisational website links here -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center">
+        <p>&copy; 2021. designed by Ouma Ronald</p>
+    </footer>
+
+    <script>
+        document.getElementById("profile-photo").addEventListener("click", function() {
+            var imageSrc = this.getAttribute("src");
+ if (imageSrc.endsWith("j.jpeg")) {
+            this.setAttribute("src", "images/yh.jpeg");
+        } else if (imageSrc.endsWith("yh.jpeg")) {
+            this.setAttribute("src", "images/ty.jpeg");
+        } else {
+            this.setAttribute("src", "images/j.jpeg");
+        }
+        });
+
+        var images = ["j.jpeg", "yh.jpeg","ty.jpeg"];
+        var currentImageIndex = 0;
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            document.getElementById("profile-photo").src = images[currentImageIndex];
+        }
+    </script>
+</body>
+</html>
